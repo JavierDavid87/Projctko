@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="My academic portfolio">
+<title>My Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="bar"></div><div id="glow"></div><div id="toast" role="status" aria-live="polite"></div>
+
+<nav>
+  <a class="logo" href="#home">My<b>.</b>Portfolio</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+  <ul id="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About Me</a></li>
+  </ul>
+  <button class="btn admin-only" id="exp" title="Export your portfolio for publishing">Export site</button>
+</nav>
+
+<header id="home">
+<i class="orb o1"></i><i class="orb o2"></i><i class="ring"></i><i class="ring r2"></i>
+<canvas id="fx"></canvas>
+<div class="hero">
+  <p class="hi">Hello, I'm</p>
+  <h1 id="hName" class="edit admin-only" contenteditable="true" spellcheck="false" data-k="name">Your Name</h1>
+  <h1 id="publicName" class="public-only"></h1>
+  <p class="type" id="type"></p>
+  <div class="cta">
+    <a class="btn" href="#quiz">View my work</a>
+    <a class="btn ghost" href="#about">About me</a>
+  </div>
+  <div class="stats">
+    <div><b id="s1">0</b><span>Files</span></div>
+    <div><b id="s2">0</b><span>Pictures</span></div>
+    <div><b id="s3">0</b><span>Documents</span></div>
+    <div><b>6</b><span>Sections</span></div>
+  </div>
+</div>
+<a class="scroll" href="#about" aria-label="Scroll down"></a>
+</header>
+
+<section class="blk rv" id="about">
+<h2>About Me</h2>
+<div class="about">
+  <label class="pic" id="pic" tabindex="0">
+    <span>Click to add<br>your photo</span>
+    <input id="picIn" type="file" accept="image/*" hidden>
+  </label>
+  <div>
+    <h3 class="edit admin-only" contenteditable="true" spellcheck="false" data-k="role">Student · Aspiring Developer</h3>
+    <p class="edit admin-only" contenteditable="true" spellcheck="false" data-k="bio">Click here to write about yourself: who you are, what you study, and what you enjoy building or learning.</p>
+    <h3 class="public-only" id="publicRole"></h3>
+    <p class="public-only" id="publicBio"></p>
+    <div class="facts">
+      <span class="edit admin-only" contenteditable="true" data-k="f1">Course / Year</span>
+      <span class="edit admin-only" contenteditable="true" data-k="f2">School</span>
+      <span class="edit admin-only" contenteditable="true" data-k="f3">Email</span>
+    </div>
+    <div class="facts public-only" id="publicFacts"></div>
+  </div>
+</div>
+</section>
+
+<div id="sections"></div>
+
+<div id="lb" aria-hidden="true"><button id="lbClose" aria-label="Close">×</button><img alt=""></div>
+<footer>My Portfolio · Academic Portfolio</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
